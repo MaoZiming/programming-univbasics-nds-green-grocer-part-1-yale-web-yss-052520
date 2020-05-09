@@ -20,10 +20,10 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   arr = []
   counter = 0;
-  while counter < collection.size do
-    name = collection[counter][:item]
+  while counter < cart.size do
+    name = cart[counter][:item]
     if find_item_by_name_in_collection(name, arr) == nil
-      h = collection[counter]
+      h = cart[counter]
       h[:count] = 1
       arr << h
     else
