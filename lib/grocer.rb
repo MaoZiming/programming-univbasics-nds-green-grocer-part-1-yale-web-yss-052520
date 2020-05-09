@@ -27,15 +27,16 @@ def consolidate_cart(cart)
       h[:count] = 1
       arr << h
     else
-      counter = 0;
-      while counter < arr.size do
-        if arr[counter][:item] == name
-          arr[counter][:count] += 1
+      i = 0;
+      while i < arr.size do
+        if arr[i][:item] == name
+          arr[i][:count] += 1
           break
         end
-        counter += 1
+        i += 1
       end
     end
     counter += 1
   end
+  arr
 end
